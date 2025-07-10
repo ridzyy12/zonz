@@ -61,30 +61,31 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Confetti JS Library -->
+   <!-- Confetti JS Library -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
   // Confetti function
   function shootConfetti() {
     confetti({
-      particleCount: 100,
-      spread: 70,
+      particleCount: 60,       // Fewer particles = lighter effect
+      spread: 50,              // Less spread = slower look
       origin: { y: 0.6 }
     });
   }
 
-  // Start shooting every 400ms for 3 seconds
-  const interval = setInterval(shootConfetti, 400);
+  // Shoot confetti every 600ms
+  const interval = setInterval(shootConfetti, 600);
 
-  // Stop after 3 seconds
+  // Stop after 2 seconds
   setTimeout(() => {
     clearInterval(interval);
-  }, 3000);
+  }, 2000);
 
   // Optional: initial burst
   shootConfetti();
 </script>
+
 
   </body>
 </html>
